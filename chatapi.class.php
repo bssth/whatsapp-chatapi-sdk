@@ -1,4 +1,7 @@
 <?php
+	/**
+	 * Chat-Api.com SDK
+	 */
 
 	class ChatApi
 	{
