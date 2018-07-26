@@ -59,7 +59,7 @@ Client example:
 # Send message
 
 <pre>
-      die(
-			    ($api->sendPhoneMessage('+12345', 'It works!') == true) ? 'Message sent' : 'Fail'
-			);
+	die(
+		($api->sendPhoneMessage('+12345', 'It works!') == true) ? 'Message sent' : 'Fail'
+	);
 </pre>
