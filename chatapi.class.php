@@ -1,8 +1,9 @@
 <?php
+    namespace Mike4ip;
 
     /**
      * Class ChatApi
-     * @author Mike Chip
+     * @package Mike4ip
      */
     class ChatApi
     {
@@ -13,10 +14,9 @@
         protected $_mem = [];
 
         /**
-         * Create instance
-         * @param string $token
+         * ChatApi constructor.
+         * @param $token
          * @param string $url
-         * @return void
          */
         public function __construct($token, $url = 'https://foo.chat-api.com')
         {
@@ -25,6 +25,7 @@
         }
 
         /**
+         * Construct query URL
          * @param $method
          * @param array $args
          * @return string
@@ -67,6 +68,7 @@
         }
 
         /**
+         * Recursively get all inbox messages
          * @return array|mixed|null
          */
         public function getFullInbox()
@@ -118,7 +120,7 @@
         }
 
         /**
-         * Get all inbox messages ( include queue)
+         * Get all inbox messages (+ queue)
          * @return null|array
          */
         public function getInbox($offset = 0)
@@ -257,7 +259,7 @@
         }
 
         /**
-         * Show screenshot of instance
+         * Get screenshot URL of instance
          * @return string
          */
         public function getScreenshot()
@@ -289,7 +291,7 @@
         }
 
         /**
-         * Generate dialogues list from messages
+         * Generate conversations (dialogues-like) list from messages
          * @param int $offset
          * @return array
          */

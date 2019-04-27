@@ -1,0 +1,25 @@
+{
+    "name": "mikechip/chatapi",
+    "description": "Simple middleware to work with Chat-API.com",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mikechip/whatsapp-chatapi-sdk"
+        }
+    ],
+    "version": "2.0.0",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Boris Stelmakh",
+            "email": "mikael.chip@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["chatapi.class.php"]
+    },
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
