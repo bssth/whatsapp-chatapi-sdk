@@ -2,6 +2,14 @@
 
 This library makes work with chat-api.com easier
 
+# Installation
+
+Just download chatapi.class.php or use Composer:
+
+```
+composer require mikechip/chatapi
+```
+
 # Create instance
 
 ```
