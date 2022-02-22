@@ -291,6 +291,20 @@
         }
 
         /**
+         * Send buttons message to chat (by not phone but chat ID)
+         * @param string $chat
+         * @param string $text
+         * @param array $buttons
+         * @param string $title
+         * @param string $footer
+         * @return array
+         */
+        public function sendButtons($chat, $text, $buttons, $title = '', $footer = '')
+        {
+            return json_decode($this->query('sendButtons', ['chatId' => $chat, 'body' => $text, 'title' => $title, 'footer' => $footer, 'buttons' => $buttons], 'POST'), 1);
+        }
+        
+        /**
          * Generate conversations (dialogues-like) list from messages
          * @param int $offset
          * @return array
