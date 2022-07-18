@@ -280,6 +280,19 @@
         }
 
         /**
+         * Send file to chat
+         * @param string $chat
+         * @param string $body
+         * @param string $filename
+         * @param string $caption
+         * @return boolean
+         */
+        public function sendFileCaption($chat, $body, $filename, $caption)
+        {
+            return json_decode($this->query('sendFile', ['chatId' => $chat, 'filename' => $filename, 'body' => $body, 'caption' => $caption]), 1)['sent'];
+        }
+
+        /**
          * Send message to chat (by not phone but chat ID)
          * @param string $chat
          * @param string $text
