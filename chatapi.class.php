@@ -276,7 +276,7 @@
          */
         public function sendFile($chat, $body, $filename)
         {
-            return json_decode($this->query('sendFile', ['chatId' => $chat, 'filename' => $filename, 'body' => $body]), 1)['sent'];
+            return json_decode($this->query('sendFile', ['chatId' => $chat, 'filename' => $filename, 'body' => $body], 'POST'), 1)['sent'];
         }
 
         /**
