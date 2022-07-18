@@ -7,7 +7,7 @@ This library makes work with chat-api.com easier
 Just download chatapi.class.php or use Composer:
 
 ```
-composer require mikechip/chatapi
+composer require nagnit4enko/whatsapp-chatapi-sdk
 ```
 
 # Create instance

@@ -274,9 +274,9 @@
          * @param string $filename
          * @return boolean
          */
-        public function sendFile($chat, $body, $filename)
+        public function sendFile($chat, $body, $filename, $caption = '')
         {
-            return json_decode($this->query('sendFile', ['chatId' => $chat, 'filename' => $filename, 'body' => $body]), 1)['sent'];
+            return json_decode($this->query('sendFile', ['chatId' => $chat, 'filename' => $filename, 'body' => $body, 'caption' => $caption]), 1)['sent'];
         }
 
         /**
@@ -303,6 +303,20 @@
             return json_decode($this->query('sendMessage', ['chatId' => $chat, 'body' => $text]), 1)['sent'];
         }
 
+        /**
+         * Send buttons message to chat (by not phone but chat ID)
+         * @param string $chat
+         * @param string $text
+         * @param array $buttons
+         * @param string $title
+         * @param string $footer
+         * @return array
+         */
+        public function sendButtons($chat, $text, $buttons, $title = '', $footer = '')
+        {
+            return json_decode($this->query('sendButtons', ['chatId' => $chat, 'body' => $text, 'title' => $title, 'footer' => $footer, 'buttons' => $buttons], 'POST'), 1);
+        }
+        
         /**
          * Generate conversations (dialogues-like) list from messages
          * @param int $offset
